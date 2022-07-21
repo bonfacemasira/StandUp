@@ -3,12 +3,12 @@
     {
       "id": 1,
       "name": "Otto",
-      "gender": "Female"
+      "gender": "Male"
     },
     {
       "id": 2,
       "name": "Dallas",
-      "gender": "Male"
+      "gender": "Female"
     },
     {
       "id": 3,

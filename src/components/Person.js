@@ -3,7 +3,7 @@ import React from "react";
 function Person({ person, onDeletePerson, onUpdatePerson }) {
   //DELETE
   function handleDeleteClick() {
-    fetch(`http://localhost:3000/persons${person.id}`, {
+    fetch(`http://localhost:3000/persons/${person.id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -35,6 +35,7 @@ function Person({ person, onDeletePerson, onUpdatePerson }) {
           <option value="Female">Female</option>
         </select>
       </div>
+      {/* DELETE*/}
       <button className="remove" onClick={handleDeleteClick}>
         DELETE
       </button>

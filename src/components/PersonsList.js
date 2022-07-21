@@ -17,7 +17,7 @@ function PersonsList() {
     );
   }, []);
 
-  //DELETE
+  // add this callback function
   function handleDeletePerson(deletedPerson) {
     const updatePersons = persons.filter(
       (person) => person.id !== deletedPerson.id
@@ -44,7 +44,8 @@ function PersonsList() {
   return (
     <div>
       <Form onAddPerson={handleAddPerson} />
-      <ul>
+      <ol>
+        {/* pass it as a prop to Person */}
         {persons.map((person) => (
           <Person
             key={person.id}
@@ -53,7 +54,7 @@ function PersonsList() {
             onUpdatePerson={handleUpdatePerson}
           />
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }
